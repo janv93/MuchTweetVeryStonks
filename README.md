@@ -1,7 +1,7 @@
 # MuchTweetVeryStonks
 ```javascript
   if (elon tweets) {  
-   var muchStonks? = veryPrice()  
+   muchStonks? = veryPrice()  
 
    if (muchStonks?) {  
     bigBuySuchAmaze()  
