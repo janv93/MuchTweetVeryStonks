@@ -1,2 +1,15 @@
 # MuchTweetVeryStonks
-When tweet much stonks very moon such rich
+if (elon tweets) {
+ var muchStonks? = veryPrice()
+ 
+ if (muchStonks?) {
+  bigBuySuchAmaze()
+  waitForMoon()
+  bigSellVeryWow()
+  
+  // perhaps stonks:
+  // dankShort? = angryDoge()
+  // waitForAngery()
+  // niceClose()
+ }
+]
