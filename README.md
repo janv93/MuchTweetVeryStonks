@@ -10,7 +10,7 @@
 
     // perhaps stonks:  
     // dankShort? = angryDoge()  
-    // waitForMaxAngery(sorry)  
+    // waitForMaxAngery(very sorry)  
     // niceClose()  
    }
   }
