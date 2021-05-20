@@ -12,6 +12,5 @@
     // dankShort? = angryDoge()  
     // waitForMaxAngery(sorry)  
     // niceClose()  
-   }  
-  ]
+   }
 ```
