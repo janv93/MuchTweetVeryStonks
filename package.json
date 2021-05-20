@@ -4,6 +4,7 @@
   "description": "very description",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,6 +30,7 @@
   },
   "homepage": "https://github.com/janv93/MuchTweetVeryStonks#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "axios": "^0.21.1",
+    "dotenv": "^9.0.2"
   }
 }
