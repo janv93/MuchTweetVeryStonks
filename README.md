@@ -1,4 +1,5 @@
 # MuchTweetVeryStonks
+```javascript
   if (elon tweets) {  
    var muchStonks? = veryPrice()  
 
@@ -13,3 +14,4 @@
     // niceClose()  
    }  
   ]
+```
