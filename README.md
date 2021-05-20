@@ -9,7 +9,7 @@ if (elon tweets) {
     
   // perhaps stonks:  
   // dankShort? = angryDoge()  
-  // waitForAngery()  
+  // waitForMaxAngery(sorry)  
   // niceClose()  
  }  
 ]
