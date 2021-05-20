@@ -1,7 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
 
-const interval = 1000000;  // seconds
+const interval = 10;  // seconds
 
 checkTwitter().then(res => {
   const data = res.data;
@@ -53,8 +53,6 @@ function processTweet(tweet) {
     return tweet.includes(signal);
   });
 
-  console.log(message);
-
   if (containsDoge) {
     processDoge();
   }
@@ -65,5 +63,5 @@ function processTweet(tweet) {
 }
 
 function processDoge() {
-  console.log('oh he did not..')
+  console.log('WIP: TODO: add binance connection and algorithm');
 }
