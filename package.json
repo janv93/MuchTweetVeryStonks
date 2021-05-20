@@ -1,0 +1,34 @@
+{
+  "name": "muchtweetverystonks",
+  "version": "1.0.0",
+  "description": "very description",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janv93/MuchTweetVeryStonks.git"
+  },
+  "keywords": [
+    "doge",
+    "coin",
+    "elon",
+    "musk",
+    "twitter",
+    "bitcoin",
+    "trading",
+    "bot",
+    "leverage",
+    "futures"
+  ],
+  "author": "Doge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janv93/MuchTweetVeryStonks/issues"
+  },
+  "homepage": "https://github.com/janv93/MuchTweetVeryStonks#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
