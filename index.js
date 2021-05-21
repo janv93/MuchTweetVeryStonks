@@ -1,4 +1,5 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+if (dotenv) { dotenv.config(); }
 const crypto = require('crypto');
 const axios = require('axios');
 
