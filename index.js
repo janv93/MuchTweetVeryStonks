@@ -40,7 +40,6 @@ function getNewTweet(tweets) {
     const now = new Date();
 
     const timeDiff = Math.abs(date - now);
-    console.log(timeDiff);
 
     if (timeDiff <= interval * 2) {
       return true;
