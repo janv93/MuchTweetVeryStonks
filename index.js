@@ -29,11 +29,13 @@ let currentDogePosition = 0;
 let recursiveChecksDone = 0;
 
 const app = express();
-app.listen('port', process.env.PORT || 3000);
+
 app.get('/', (req, res) => {
   res.send('App is running');
   main();
 });
+
+app.listen('port', process.env.PORT || 3000);
 
 function main() {
   twitterCallInterval = setInterval(() => {
