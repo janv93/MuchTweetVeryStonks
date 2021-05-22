@@ -17,9 +17,6 @@
 ```
 
 
-THIS APP IS CURRENTLY WIP - I DOES NOT YET CLOSE THE POSITIONS
-
-
 How to use:
 
 Rename the \_.env file to .env and place necessary api keys there. Then run npm start.
