@@ -1,3 +1,4 @@
+const express = require('express');
 const dotenv = require('dotenv');
 if (dotenv) { dotenv.config(); }
 const crypto = require('crypto');
@@ -27,7 +28,12 @@ let currentBitcoinPosition = 0;
 let currentDogePosition = 0;
 let recursiveChecksDone = 0;
 
-main();
+const app = express();
+app.listen('port', process.env.PORT || 3000);
+app.get('/', (req, res) => {
+  res.send('App is running');
+  main();
+});
 
 function main() {
   twitterCallInterval = setInterval(() => {
