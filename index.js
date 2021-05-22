@@ -6,6 +6,9 @@ const axios = require('axios');
 const interval = 7 * 1000;  // ms
 let twitterCallInterval;
 
+let currentBitcoinPosition = 0;
+let currentDogePosition = 0;
+
 main();
 
 function main() {
@@ -64,22 +67,22 @@ function processTweet(tweet) {
 
   if (containsDoge) {
     clearInterval(twitterCallInterval);   // stop twitter calls
-    processDoge();
+    processBinance('DOGE');
   }
 
   if (containsBtc) {
-    processBtc();
+    processBinance('BTC');
   }
 }
 
-function processDoge() {
-  getCandlesticks('DOGEUSDT').then(res => {
+function processBinance(symbol) {
+  getCandlesticks(symbol + 'USDT').then(res => {
     const lastStick = res.data[1];   // now - 1 min
-    recursivePriceCheck(lastStick[4], 'DOGE');
+    recursivePriceCheck(lastStick[4], symbol);
   }).catch(err => handleError(err));
 }
 
-// get price again immediatly when server answers
+// get price again immediately when server answers
 function recursivePriceCheck(lastClose, symbol) {
   getPrice(symbol + 'USDT').then(res => {
     const currentPrice = res.data.indexPrice;
@@ -95,11 +98,15 @@ function recursivePriceCheck(lastClose, symbol) {
       console.log('Price increase threshold reached, placing order');
       setLeverage(10).then(() => {
         openLongCloseShort(symbol + 'USDT').then(res => {
-          // TODO: close long after peak
+          sellAtPeak(symbol);
         }).catch(err => handleError(err));
       }).catch(err => handleError(err));
     }
   }).catch(err => handleError(err));
+}
+
+function sellAtPeak(symbol) {
+
 }
 
 function getCandlesticks(symbol) {
@@ -138,6 +145,8 @@ function openShortCloseLong(symbol) {
 
 function createOrder(symbol, side) {
   const now = Date.now();
+  const quantityBitcoin = 20;
+  const quantityDoge = 0.001;
 
   let query =
     'symbol=' + symbol
@@ -146,8 +155,12 @@ function createOrder(symbol, side) {
     + '&type=' + 'MARKET';
 
   switch (symbol) {
-    case 'BTCUSDT': query += '&quantity=' + '0.001';
-    case 'DOGEUSDT': query += '&quantity=' + '20';
+    case 'BTCUSDT': query += '&quantity=' + quantityBitcoin;
+    side === 'BUY' ? currentBitcoinPosition += quantityBitcoin : currentBitcoinPosition -= quantityBitcoin;
+    break;
+    case 'DOGEUSDT': query += '&quantity=' + quantityDoge;
+    side === 'BUY' ? currentDogePosition += quantityDoge : currentDogePosition - quantityDoge;
+    break;
   }
 
   const hmac = createHmac(query);
