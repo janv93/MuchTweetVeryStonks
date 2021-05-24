@@ -1,11 +1,10 @@
-const express = require('express');
 const dotenv = require('dotenv');
 if (dotenv) { dotenv.config(); }
 const crypto = require('crypto');
 const axios = require('axios');
 
 const tweetCheckInterval = 5 * 1000;  // interval for checking tweets
-const waitingTimeout = 2 * 60 * 1000 // timeout for waiting after position opens, we can assume the price will go up for some time, makes sure we dont sell too early
+const waitingTimeout = 40 * 1000 // timeout for waiting after position opens, we can assume the price will go up for some time, makes sure we dont sell too early
 const thresholdIncrease = 0.5   // threshold in percent (price increase since last 1 minute close) at which a position is placed; makes sure the tweet does not have negative impact on price
 /**
  * threshold in percent; price decrease since last peak relative to peak - close of position opening price
@@ -28,17 +27,7 @@ let currentBitcoinPosition = 0;
 let currentDogePosition = 0;
 let recursiveChecksDone = 0;
 
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.get('/', (req, res) => {
-  res.send('App is running');
-  main();
-});
-
-app.listen(port, () => {
-  console.log('App listening on port ' + port);
-});
+main();
 
 function main() {
   twitterCallInterval = setInterval(() => {
