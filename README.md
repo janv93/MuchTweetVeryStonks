@@ -1,5 +1,7 @@
 # MuchTweetVeryStonks
 
+This script is listening to Elon's tweets and longs Doge if the tweet contains doge. Also some safety mechanisms.
+
 How to use:
 
 Rename the \_.env file to .env and place necessary api keys there. Then run npm start.  
