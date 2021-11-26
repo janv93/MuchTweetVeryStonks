@@ -1,5 +1,5 @@
 {
-  "name": "muchtweetverystonks",
+  "name": "much-tweet-very-stonks",
   "version": "1.0.0",
   "description": "very description",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/janv93/MuchTweetVeryStonks.git"
+    "url": "git+https://github.com/janv93/much-tweet-very-stonks.git"
   },
   "keywords": [
     "doge",
@@ -26,9 +26,9 @@
   "author": "Doge",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/janv93/MuchTweetVeryStonks/issues"
+    "url": "https://github.com/janv93/much-tweet-very-stonks/issues"
   },
-  "homepage": "https://github.com/janv93/MuchTweetVeryStonks#readme",
+  "homepage": "https://github.com/janv93/much-tweet-very-stonks#readme",
   "dependencies": {
     "axios": "^0.21.1",
     "dotenv": "^9.0.2",
