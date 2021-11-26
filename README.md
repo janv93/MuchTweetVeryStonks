@@ -1,6 +1,6 @@
 # Much Tweet Very Stonks
 
-This script is listening to Elon's tweets and longs Doge if the tweet contains doge. Also some safety mechanisms.
+This script listens to Elon's tweets and longs Doge if the tweet contains doge. Also some safety mechanisms.
 
 How to use:
 
